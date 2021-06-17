@@ -58,7 +58,7 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>PayBills_Client</SanitizedProjectName>
-        <Custom_Styles>Glow|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Glow.vsf</Custom_Styles>
+        <Custom_Styles>&quot;Sapphire Kamri|VCLSTYLE|$(BDSCOMMONDIR)\Styles\SapphireKamri.vsf&quot;</Custom_Styles>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;RESTComponents;DBXInterBaseDriver;vclactnband;vclFireDAC;tethering;svnui;JvGlobus;FireDACADSDriver;JvPluginSystem;JvMM;vcltouch;JvBands;vcldb;bindcompfmx;svn;JvJans;JvNet;inetdb;JvAppFrm;RaizeComponentsVcl;JvDotNetCtrls;RaizeComponentsVclDb;fmx;FireDACIBDriver;fmxdae;JvWizards;dbexpress;IndyCore;vclx;JvPageComps;dsnap;FireDACCommon;JvDB;RESTBackendComponents;VCLRESTComponents;soapserver;JclDeveloperTools;vclie;bindengine;DBXMySQLDriver;CloudService;JvCmp;FireDACMySQLDriver;JvHMI;FireDACCommonODBC;FireDACCommonDriver;inet;IndyIPCommon;bindcompdbx;JvCustom;vcl;IndyIPServer;JvXPCtrls;IndySystem;dsnapcon;FireDACMSAccDriver;fmxFireDAC;vclimg;Jcl;FireDAC;JvCore;JvCrypt;FireDACSqliteDriver;FireDACPgDriver;soaprtl;DbxCommonDriver;JvDlgs;JvRuntimeDesign;JvManagedThreads;xmlrtl;soapmidas;JvTimeFramework;fmxobj;vclwinx;rtl;DbxClientDriver;CustomIPTransport;vcldsnap;JvSystem;JvStdCtrls;bindcomp;appanalytics;IndyIPClient;bindcompvcl;JvDocking;dbxcds;VclSmp;JvPascalInterpreter;adortl;JclVcl;dsnapxml;dbrtl;IndyProtocols;inetdbxpress;JvControls;JvPrintPreview;JclContainers;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
@@ -101,16 +101,23 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="uMain.pas">
-            <Form>FormMain</Form>
+        <DCCReference Include="Controllers\PayBills.Controllers.uAppController.pas"/>
+        <DCCReference Include="Controllers\PayBills.Controllers.uBillsController.pas"/>
+        <DCCReference Include="Controllers\PayBills.Controllers.uBillTypesController.pas"/>
+        <DCCReference Include="Controllers\PayBills.Controllers.uLoginController.pas"/>
+        <DCCReference Include="Models\PayBills.Models.uUser.pas"/>
+        <DCCReference Include="Forms\PayBills.Forms.uBillTypes.pas">
+            <Form>BillTypes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="uUser.pas"/>
-        <DCCReference Include="uLogin.pas">
+        <DCCReference Include="Forms\PayBills.Forms.uLogin.pas">
             <Form>FormLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="uLoginController.pas"/>
+        <DCCReference Include="Forms\PayBills.Forms.uMain.pas">
+            <Form>FormMain</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

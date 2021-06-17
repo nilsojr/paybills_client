@@ -10,8 +10,12 @@ object FormLogin: TFormLogin
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lblInvalidPassword: TLabel
@@ -54,7 +58,7 @@ object FormLogin: TFormLogin
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 0
+    TabOrder = 2
     OnClick = btnLoginClick
   end
   object btnExit: TButton
@@ -70,7 +74,7 @@ object FormLogin: TFormLogin
     Font.Style = [fsBold]
     ModalResult = 2
     ParentFont = False
-    TabOrder = 1
+    TabOrder = 3
     OnClick = btnExitClick
   end
   object edtUsername: TLabeledEdit
@@ -94,7 +98,7 @@ object FormLogin: TFormLogin
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 0
     OnChange = edtUsernameChange
   end
   object edtPassword: TLabeledEdit
@@ -119,7 +123,7 @@ object FormLogin: TFormLogin
     Font.Style = []
     ParentFont = False
     PasswordChar = '*'
-    TabOrder = 3
+    TabOrder = 1
     OnChange = edtPasswordChange
   end
 end
